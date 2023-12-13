@@ -9,6 +9,7 @@ import { ProductoComponent } from './Pages/producto/producto.component';
 import { VentaComponent } from './Pages/venta/venta.component';
 import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta.component';
 import { ReporteComponent } from './Pages/reporte/reporte.component';
+import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReporteComponent } from './Pages/reporte/reporte.component';
     VentaComponent,
     HistorialVentaComponent,
     ReporteComponent,
+    ModalUsuarioComponent,
   ],
   imports: [CommonModule, LayoutRoutingModule, SharedModule],
 })
