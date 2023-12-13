@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="body">
+  <mat-card class="loginCard">
+    <div class="header">
+      <h2>Login</h2>
+    </div>
+    <mat-card-content style="padding-bottom: 15px">
+      <form [formGroup]="formularioLogin" (ngSubmit)="iniciarSesion()">
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput autocomplete="off" />
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input [type]="ocultarPassword ? 'password' : 'text'"
+          formControlName="password" matInput autocomplete="off"/>
+
+          <button mat-icon-button matSuffix
+            (click)="ocultarPassword = !ocultarPassword" type="button">
+
+            <mat-icon matSuffix>{{ocultarPassword ? "visibility_off" : "visibility"}}</mat-icon>
+          </button>
+          
+        </mat-form-field>
+        <button
+          class="full-width"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="formularioLogin.invalid"
+        >
+          Ingresar
+          <mat-icon matSuffix>login</mat-icon>
+        </button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-footer>
+      <mat-progress-bar
+        mode="indeterminate"
+        *ngIf="mostrarLoading"
+      ></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>
