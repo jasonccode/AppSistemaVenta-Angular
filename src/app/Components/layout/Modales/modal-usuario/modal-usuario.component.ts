@@ -1,6 +1,5 @@
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import {
-  MatDialogModule,
   MAT_DIALOG_DATA,
   MatDialogRef,
 } from '@angular/material/dialog';

@@ -1,0 +1,71 @@
+<h2 mat-dialog-title>{{ tituloAccion }} Producto</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="formularioProducto">
+    <mat-grid-list cols="1" rowHeight="90px">
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label> Nombre</mat-label>
+          <input matInput autocomplete="off" formControlName="nombre" />
+          <mat-icon matSuffix>fit_screen</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label> Categoria</mat-label>
+          <mat-select formControlName="idCategoria">
+            <mat-option
+              *ngFor="let item of listaCategorias"
+              [value]="item.idCategoria"
+              >{{ item.nombre }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label> Stock</mat-label>
+          <input
+            matInput
+            autocomplete="off"
+            formControlName="stock"
+            type="number"
+          />
+          <mat-icon matSuffix>edit_square</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label> Precio</mat-label>
+          <input matInput autocomplete="off" formControlName="precio" />
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label> Estado</mat-label>
+          <mat-select formControlName="esActivo">
+            <mat-option value="1">Activo</mat-option>
+            <mat-option value="0">Inactivo</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close color="warm">Volver</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="formularioProducto.invalid"
+    (click)="guardarEditar_Producto()"
+  >
+    {{ botonAccion }}
+  </button>
+</mat-dialog-actions>
