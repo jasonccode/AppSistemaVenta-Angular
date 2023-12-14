@@ -15,6 +15,7 @@ import { LayoutComponent } from './Components/layout/layout.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

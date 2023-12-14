@@ -7,7 +7,7 @@ import { Producto } from 'src/app/Interfaces/producto';
 import { ProductoService } from 'src/app/Services/producto.service';
 import { UtilidadService } from 'src/app/Reutilizable/utilidad.service';
 import { ModalProductoComponent } from '../../Modales/modal-producto/modal-producto.component';
-import { MatSort, Sort } from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-producto',
@@ -26,6 +26,8 @@ export class ProductoComponent implements OnInit, AfterViewInit {
   dataInicio: Producto[] = [];
   dataListaProductos = new MatTableDataSource(this.dataInicio);
   @ViewChild(MatPaginator) paginacionTabla!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
 
 
   constructor(
@@ -50,10 +52,13 @@ export class ProductoComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.obtenerProductos();
+
   }
 
   ngAfterViewInit(): void {
     this.dataListaProductos.paginator = this.paginacionTabla;
+    this.dataListaProductos.sort = this.sort;
+
   }
 
   AplicarFiltroTabla(event: Event) {

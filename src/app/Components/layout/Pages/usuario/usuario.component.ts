@@ -7,6 +7,7 @@ import { Usuario } from 'src/app/Interfaces/usuario';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 import { UtilidadService } from 'src/app/Reutilizable/utilidad.service';
 import { ModalUsuarioComponent } from '../../Modales/modal-usuario/modal-usuario.component';
+import { MatSort } from '@angular/material/sort';
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
@@ -23,6 +24,8 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
   dataInicio: Usuario[] = [];
   dataListaUsuario = new MatTableDataSource(this.dataInicio);
   @ViewChild(MatPaginator) paginacionTabla!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
 
   constructor(
     private dialog: MatDialog,
@@ -50,6 +53,8 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.dataListaUsuario.paginator = this.paginacionTabla;
+    this.dataListaUsuario.sort = this.sort;
+
   }
 
   AplicarFiltroTabla(event: Event) {

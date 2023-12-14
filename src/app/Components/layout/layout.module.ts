@@ -11,6 +11,7 @@ import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta
 import { ReporteComponent } from './Pages/reporte/reporte.component';
 import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.component';
 import { ModalProductoComponent } from './Modales/modal-producto/modal-producto.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,6 @@ import { ModalProductoComponent } from './Modales/modal-producto/modal-producto.
     ModalUsuarioComponent,
     ModalProductoComponent,
   ],
-  imports: [CommonModule, LayoutRoutingModule, SharedModule],
+  imports: [CommonModule, LayoutRoutingModule, SharedModule,MatSortModule],
 })
 export class LayoutModule {}
