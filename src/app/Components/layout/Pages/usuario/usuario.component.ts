@@ -2,13 +2,11 @@ import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
-//import Swal from 'sweetalert2';
 import { Usuario } from 'src/app/Interfaces/usuario';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 import { UtilidadService } from 'src/app/Reutilizable/utilidad.service';
 import { ModalUsuarioComponent } from '../../Modales/modal-usuario/modal-usuario.component';
 import Swal from 'sweetalert2';
-import { Title } from 'chart.js';
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
@@ -47,7 +45,7 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.obtenerUsuarios;
+    this.obtenerUsuarios();
   }
 
   ngAfterViewInit(): void {
@@ -66,7 +64,7 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
         disableClose: true,
       })
       .afterClosed()
-      .subscribe(resultado => {
+      .subscribe((resultado) => {
         if (resultado === 'true') this.obtenerUsuarios();
       });
   }
@@ -79,7 +77,7 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
         data: usuario,
       })
       .afterClosed()
-      .subscribe(resultado => {
+      .subscribe((resultado) => {
         if (resultado === 'true') this.obtenerUsuarios();
       });
   }

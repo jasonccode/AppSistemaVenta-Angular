@@ -2,7 +2,7 @@
 
 <mat-dialog-content>
   <form [formGroup]="formularioUsuario">
-    <mat-grid-list cols="1" rowHeight="80px">
+    <mat-grid-list cols="1" rowHeight="90px">
       <mat-grid-tile>
         <mat-form-field appearance="outline">
           <mat-label> Nombre Completo</mat-label>
@@ -22,11 +22,12 @@
       <mat-grid-tile>
         <mat-form-field appearance="outline">
           <mat-label> Rol</mat-label>
-          <mat-select formControlName="idRol"></mat-select>
-          <mat-option
-            *ngFor="let item of listaRoles"
-            [value]="item.idRol"
-          ></mat-option>
+          <mat-select formControlName="idRol">
+            <mat-option
+              *ngFor="let item of listaRoles"
+              [value]="item.idRol"
+            >{{item.nombre}}</mat-option>
+          </mat-select>
         </mat-form-field>
       </mat-grid-tile>
 
@@ -54,9 +55,10 @@
       <mat-grid-tile>
         <mat-form-field appearance="outline">
           <mat-label> Estado</mat-label>
-          <mat-select formControlName="esActivo"></mat-select>
-          <mat-option value="1">Activo</mat-option>
-          <mat-option value="0">Inactivo</mat-option>
+          <mat-select formControlName="esActivo">
+            <mat-option value="1">Activo</mat-option>
+            <mat-option value="0">Inactivo</mat-option>
+          </mat-select>
         </mat-form-field>
       </mat-grid-tile>
     </mat-grid-list>
