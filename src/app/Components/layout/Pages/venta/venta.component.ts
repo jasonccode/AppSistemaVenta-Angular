@@ -89,6 +89,15 @@ export class VentaComponent implements OnInit {
     const _precio: number = parseFloat(this.productoSeleccionado.precio);
     const _total: number = _cantidad * _precio;
     this.totalPagar = this.totalPagar + _total;
+    
+    // Verificar si la cantidad de venta es mayor al stock disponible
+    if (_cantidad > this.productoSeleccionado.stock) {
+      this._utilidadServicio.mostrarAlerta(
+        'No hay suficiente inventario',
+        'Error'
+      );
+      return; // Detener la operación si no hay suficiente inventario
+    }
 
     this.listaProductosParaVenta.push({
       idProducto: this.productoSeleccionado.idProducto,
