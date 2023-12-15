@@ -1,0 +1,29 @@
+mat-form-field {
+  width: 100%;
+}
+.full-width {
+  width: 100%;
+}
+table {
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Agrega este estilo en tu archivo CSS o en el componente donde estás utilizando esta tabla */
+
+.mat-column-acciones {
+  width: 150px; /* Ajusta el valor según tus preferencias */
+}
+
+/* Esto asegura que el contenido de la celda no se desborde y permanezca dentro del ancho especificado */
+.mat-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Esto ajusta el ancho de los botones dentro de la columna */
+button.mat-icon-button {
+  width: 40px; /* Ajusta el valor según tus preferencias */
+  height: 40px; /* Ajusta el valor según tus preferencias */
+}

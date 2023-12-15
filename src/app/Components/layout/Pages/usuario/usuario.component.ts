@@ -3,11 +3,12 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
+import { MatSort } from '@angular/material/sort';
+
 import { Usuario } from 'src/app/Interfaces/usuario';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 import { UtilidadService } from 'src/app/Reutilizable/utilidad.service';
 import { ModalUsuarioComponent } from '../../Modales/modal-usuario/modal-usuario.component';
-import { MatSort } from '@angular/material/sort';
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
