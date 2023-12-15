@@ -12,6 +12,7 @@ import { ReporteComponent } from './Pages/reporte/reporte.component';
 import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.component';
 import { ModalProductoComponent } from './Modales/modal-producto/modal-producto.component';
 import { MatSortModule } from '@angular/material/sort';
+import { ModalDetalleVentaComponent } from './Modales/modal-detalle-venta/modal-detalle-venta.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatSortModule } from '@angular/material/sort';
     ReporteComponent,
     ModalUsuarioComponent,
     ModalProductoComponent,
+    ModalDetalleVentaComponent,
   ],
   imports: [CommonModule, LayoutRoutingModule, SharedModule,MatSortModule],
 })

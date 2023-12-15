@@ -1,10 +1,7 @@
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
-import { Component, Inject, OnInit, inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Rol } from 'src/app/Interfaces/rol';
 import { Usuario } from 'src/app/Interfaces/usuario';
 import { RolService } from 'src/app/Services/rol.service';
