@@ -4,6 +4,7 @@ import { Component, Inject } from '@angular/core';
 import { DetalleVenta } from '../../../../Interfaces/detalle-venta';
 import { Venta } from 'src/app/Interfaces/venta';
 
+
 @Component({
   selector: 'app-modal-detalle-venta',
   templateUrl: './modal-detalle-venta.component.html',

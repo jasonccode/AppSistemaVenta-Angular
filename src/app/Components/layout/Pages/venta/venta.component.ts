@@ -89,7 +89,7 @@ export class VentaComponent implements OnInit {
     const _precio: number = parseFloat(this.productoSeleccionado.precio);
     const _total: number = _cantidad * _precio;
     this.totalPagar = this.totalPagar + _total;
-    
+
     // Verificar si la cantidad de venta es mayor al stock disponible
     if (_cantidad > this.productoSeleccionado.stock) {
       this._utilidadServicio.mostrarAlerta(
@@ -103,8 +103,8 @@ export class VentaComponent implements OnInit {
       idProducto: this.productoSeleccionado.idProducto,
       descripcionProducto: this.productoSeleccionado.nombre,
       cantidad: _cantidad,
-      precioTexto: String(_precio.toFixed(2)),
-      totalTexto: String(_total.toFixed(2)),
+      precioTexto: String(_precio.toFixed(0)),
+      totalTexto: String(_total.toFixed(0)),
     });
 
     this.datosDetalleVenta = new MatTableDataSource(

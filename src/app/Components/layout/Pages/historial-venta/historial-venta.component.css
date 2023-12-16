@@ -1,0 +1,47 @@
+.campos-formulario{
+  display: flex;
+  align-items: flex-start;
+}
+
+.boton-buscar{
+  width: 150px;
+  margin-top: 15px;
+}
+
+
+
+.input-filter{
+  width: 100px;
+  font-size: 14px;
+}
+
+table{
+  width: 100%;
+  font-size: 14px;
+
+}
+mat-form-field {
+  width: 100%;
+  margin-right: 10px;
+
+}
+
+
+/* Agrega este estilo en tu archivo CSS o en el componente donde estás utilizando esta tabla */
+
+.mat-column-acciones {
+  width: 150px; /* Ajusta el valor según tus preferencias */
+}
+
+/* Esto asegura que el contenido de la celda no se desborde y permanezca dentro del ancho especificado */
+.mat-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Esto ajusta el ancho de los botones dentro de la columna */
+button.mat-icon-button {
+  width: 40px; /* Ajusta el valor según tus preferencias */
+  height: 40px; /* Ajusta el valor según tus preferencias */
+}
