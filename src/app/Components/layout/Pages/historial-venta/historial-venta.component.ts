@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChild ,OnInit} from '@angular/core';
+import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
@@ -27,8 +27,7 @@ export const MY_DATA_FORMATS = {
   styleUrls: ['./historial-venta.component.css'],
   providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_DATA_FORMATS }],
 })
-export class HistorialVentaComponent implements AfterViewInit , OnInit{
-
+export class HistorialVentaComponent implements AfterViewInit, OnInit {
   formularioBusqueda: FormGroup;
   opcionesBusqueda: any[] = [
     { value: 'fecha', descripcion: 'Por Fechas' },
@@ -46,7 +45,6 @@ export class HistorialVentaComponent implements AfterViewInit , OnInit{
   datosListaVenta = new MatTableDataSource(this.dataInicio);
   @ViewChild(MatPaginator) paginacionTabla!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-
 
   constructor(
     private fb: FormBuilder,
@@ -71,12 +69,9 @@ export class HistorialVentaComponent implements AfterViewInit , OnInit{
         });
       });
   }
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-
     this.datosListaVenta.paginator = this.paginacionTabla;
     this.datosListaVenta.sort = this.sort;
   }
