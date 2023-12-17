@@ -41,11 +41,7 @@
 
     <mat-divider></mat-divider>
 
-    <mat-form-field class="input-filter">
-      <mat-label>Buscar</mat-label>
-      <input matInput (keyup)="AplicarFiltroTabla($event)" #input />
-    </mat-form-field>
-
+   
     <div class="mat-elevation-z2">
       <table mat-table [dataSource]="datosListaVenta" matSort>
         <ng-container matColumnDef="fechaRegistro">
@@ -84,7 +80,7 @@
         <tr mat-row *matRowDef="let row; columns: columnaTabla,"></tr>
 
         <tr class="mat-row" *matNoDataRow>
-          <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro {{input.value}}</td>
+          <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro {{formularioBusqueda.value.numero}}</td>
         </tr>
       </table>
 
