@@ -1,14 +1,11 @@
 import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import * as moment from 'moment';
-import { Venta } from 'src/app/Interfaces/venta';
 import { VentaService } from 'src/app/Services/venta.service';
 import { UtilidadService } from 'src/app/Reutilizable/utilidad.service';
-import { ModalDetalleVentaComponent } from '../../Modales/modal-detalle-venta/modal-detalle-venta.component';
 import * as XLSX from 'xlsx';
 import { Reporte } from 'src/app/Interfaces/reporte';
 
@@ -32,7 +29,7 @@ export class ReporteComponent implements AfterViewInit, OnInit {
   listaVentaReporte: Reporte[] = [];
   columnasTabla: string[] = [
     'fechaRegistro',
-    'numeroVenta',
+    'numeroDocumento',
     'tipoPago',
     'total',
     'producto',
@@ -92,5 +89,13 @@ export class ReporteComponent implements AfterViewInit, OnInit {
       },
       error: (e) => {},
     });
+  }
+
+  exportarExcel() {
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.json_to_sheet(this.listaVentaReporte);
+
+    XLSX.utils.book_append_sheet(wb, ws, 'Reporte');
+    XLSX.writeFile(wb, 'Reporte Ventas.xlsx');
   }
 }
