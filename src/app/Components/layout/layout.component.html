@@ -1,9 +1,18 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <h1 style="margin: 20px 20px 20px 20px">Sistema Venta </h1>
+    <h1 style="margin: 20px 20px 20px 20px">Sistema Venta</h1>
 
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
+    </button>
+
+    <span style="flex: 1 1 auto"></span>
+    <label style="font-size: 14px; margin-right: 20px">
+      {{ correoUsuario }} | {{ rolUsuario }}</label
+    >
+
+    <button mat-icon-button (click)="cerrarSesion()">
+      <mat-icon>login</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -11,7 +20,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav opened="true" mode="side" style="width: 230px">
     <mat-nav-list>
-      <mat-list-item routerLink="/pages/dashboard">
+      <!-- <mat-list-item routerLink="/pages/dashboard">
         <mat-icon matListItemIcon>dashboard</mat-icon>
         <div mat-line>DashBoard</div>
       </mat-list-item>
@@ -34,6 +43,15 @@
       <mat-list-item routerLink="/pages/reportes">
         <mat-icon matListItemIcon>receipt</mat-icon>
         <div mat-line>Reportes</div>
+      </mat-list-item>
+      <mat-list-item routerLink="/pages/reportes">
+        <mat-icon matListItemIcon>receipt</mat-icon>
+        <div mat-line>Reportes</div>
+      </mat-list-item> -->
+
+      <mat-list-item *ngFor="let menu of listaMenus" [routerLink]="menu.url">
+        <mat-icon matListItemIcon>{{menu.icono}}</mat-icon>
+        <div mat-line>{{menu.nombre}}</div>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
