@@ -38,3 +38,6 @@ Implementación del menú que proporciona un panel de control visual con informa
 
 - Funciones de Usuario
 Menú Dinámico, Información de Usuario y Cerrar Sesión, se finalizan las funciones de usuario con la implementación de un menú dinámico, la visualización de información del usuario y la opción de cerrar sesión.
+
+<img width="1422" alt="appsistemaventas" src="https://github.com/jasonccode/AppSistemaVenta-Angular/assets/105800226/569c4b50-cae4-4df5-9161-8070eece6efd">
+
