@@ -1,28 +1,40 @@
 # AppSistemaVenta
+Desarrollo de la Aplicación con Angular Material
+
+Este repositorio contiene el código fuente y los recursos para el desarrollo de una aplicación de ventas utilizando Angular Material y ASP.NET Core. A continuación, se detallan las secciones y pasos para implementar la aplicación que consume la API https://github.com/jasonccode/API-SistemaVenta-ASPNET
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+## Crear App Angular + Recursos e Implementación de Servicios
+Se abarca la creación de la aplicación Angular, la gestión de recursos y la implementación de servicios para interactuar con la API REST de ASP.NET Core.
 
-## Development server
+- Implementación de Solicitudes API
+Se realizan solicitudes a la API REST desarrollada en ASP.NET Core para obtener y manipular datos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Implementación de Carpetas y Vistas del Sistema
+Se crean carpetas y vistas esenciales para la funcionalidad del sistema.
 
-## Code scaffolding
+- Implementación de Menús y Login
+Se desarrollan los menús de navegación y la funcionalidad de inicio de sesión para la aplicación.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Desarrollo de los Menús del Sistema
 
-## Build
+- Menú Usuarios
+Detalles sobre la implementación del menú de gestión de usuarios en la aplicación.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Menú Productos
+Instrucciones para desarrollar el menú dedicado a la gestión de productos en el sistema.
 
-## Running unit tests
+- Menú Ventas
+Se abordan los pasos para implementar el menú de registro y gestión de ventas.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Menú Historial Ventas
+Descripción de la implementación del menú que muestra el historial de ventas realizadas.
 
-## Running end-to-end tests
+- Menú Reportes
+Desarrollo del menú para generar informes y estadísticas del sistema de ventas.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Menú Dashboard
+Implementación del menú que proporciona un panel de control visual con información clave.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Funciones de Usuario
+Menú Dinámico, Información de Usuario y Cerrar Sesión, se finalizan las funciones de usuario con la implementación de un menú dinámico, la visualización de información del usuario y la opción de cerrar sesión.
